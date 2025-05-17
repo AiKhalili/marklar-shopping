@@ -28,6 +28,7 @@ class Shopping{
     void addItem(Item*, int); // اضافه کردن یک کالا به سبد خرید
     void delItem(Item*, int); // حذف یک کالا از سبد خرید
     float calculateTotal() const; // به درست اوردن هزینه کل کالاهای خریداری شده
+    bool isEmpty() const;
 };
 
 

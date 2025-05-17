@@ -11,6 +11,7 @@ void Shopping::addItem(Item* item, int amount){
     for(auto it = items.begin(); it != items.end(); ++it){
         if (it->item_ptr == item) {
             it->amount += amount;
+            it->freeItems += freeItem;
             return;
         }
     }
@@ -72,5 +73,9 @@ ostream& operator<<(std::ostream& output, const Shopping& buy){
     output << "TOTALPRICE: " << buy.calculateTotal() << "\n";
     output << "===================\n";
     return output;
+}
+
+bool Shopping::isEmpty() const{
+    return items.empty();
 }
 
