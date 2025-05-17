@@ -1,5 +1,9 @@
 # Marklar Goes Shopping
 
+## Profiles
+- [Zeinab Khalili] [40312358011] (https://github.com/AiKhalili)
+- [Fatemeh Shabani] [40312358022] (https://github.com/ftmshab)
+
 ## Overview
 This project is a simulation of a shopping system for a futuristic supermarket. It supports different product types and units, currency conversions, discount rules, and manages both personal and organizational bank accounts for transactions.
 
@@ -77,6 +81,3 @@ make
 └── .gitignore
 ---
 
-## Github Profiles
-- [Zeinab Khalili] (https://github.com/AiKhalili)
-- [Fatemeh Shabani] (https://github.com/ftmshab)
