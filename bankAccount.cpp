@@ -54,7 +54,6 @@ string BankAccount::getCurrencyCode() const
     return balance->getCode();
 }
 
-void BankAccount::resetDailyTransfer()
-{
-    dailyTranferredUSD = 0;
+string BankAccount::getName() const{
+    return name;
 }

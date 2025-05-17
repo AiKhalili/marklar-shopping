@@ -26,7 +26,7 @@ public:
     bool withdraw(Currency *);
     double getBalance() const;
     std::string getCurrencyCode() const;
-    void resetDailyTransfer();
+    std::string getName() const;
 };
 
 #endif
