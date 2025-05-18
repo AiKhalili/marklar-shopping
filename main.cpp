@@ -93,10 +93,8 @@ void addItemToCart(vector<Item *> &stock, Shopping &cart)
     try
     {
         cart.addItem(selectedItem, count);
-        if (int i = count / 5)
-        {
-            count += i;
-        }
+        int i = count / 5;
+        count += i;
         cout << count << " of " << selectedItem->get_name() << " added to cart successfully.\n";
     }
     catch (const exception &e)
@@ -228,7 +226,8 @@ int main()
     {
         menu();
         cin >> choice;
-        if(cin.fail()){
+        if (cin.fail())
+        {
             cin.clear();
             cin.ignore(10000, '\n');
             cout << "Invalid input. Please enter a number.\n";
