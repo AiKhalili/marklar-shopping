@@ -90,17 +90,18 @@ void addItemToCart(vector<Item *> &stock, Shopping &cart)
         return;
     }
     Item *selectedItem = stock[selection - 1];
-    try
+
+    if (count == 1)
+    {
+        ++(*selectedItem);
+    }
+    else
     {
         cart.addItem(selectedItem, count);
         int i = count / 5;
         count += i;
-        cout << count << " of " << selectedItem->get_name() << " added to cart successfully.\n";
     }
-    catch (const exception &e)
-    {
-        cerr << "Error: " << e.what() << endl;
-    }
+    cout << count << " of " << selectedItem->get_name() << " added to cart successfully.\n";
 }
 
 void removeItemFromCart(std::vector<Item *> &stock, Shopping &cart)
@@ -134,7 +135,14 @@ void removeItemFromCart(std::vector<Item *> &stock, Shopping &cart)
         {
             try
             {
-                cart.delItem(item, count);
+                if (count == 1)
+                {
+                    --(*item);
+                }
+                else
+                {
+                    cart.delItem(item, count);
+                }
                 cout << count << " of " << item->get_name() << " removed from cart.\n";
             }
             catch (const exception &e)
